@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>課題07 レコメンド機能</title>
+        <meta name="description" content="Title">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app">
+            <h1>おすすめの小型犬探します！</h1>
+            <img src="inu.png" alt="">
+            <p>質問の答えに合わせて、あなたにぴったりのワンちゃんをご紹介します。</p>
+            <section v-if="status === 1 ">
+                <span>Q１</span>
+                <h2>犬の性格は？</h2>
+                <a href="#" v-on:click="q1('Loyalty')">忠誠心が強い</a>
+                <a href="#" v-on:click="q1('Naughty')">遊び好きでやんちゃっ子</a>
+            </section>
+            <section v-if="status === 2 ">
+                <span>Q２</span>
+                <h2>毛の長さは？</h2>
+                <a href="#" v-on:click="q2('short')">短毛</a>
+                <a href="#" v-on:click="q2('long')">長毛</a>
+            </section>
+            <section v-if="status === 3 ">
+                <span>Q２</span>
+                <h2>毛の色は？</h2>
+                <a href="#" v-on:click="q3('mono')">単色がいい！</a>
+                <a href="#" v-on:click="q3('colorful')">いろんな色の種類がいい</a>
+            </section>
+            <section class="result" v-if="status === 4">
+                <h3>あなたにぴったりのワンちゃんは...</h3>
+                <p><strong>{{ result }}</strong>です！！</p>
+                <p>ぜひ参考にしてみてください♪</p>
+                <a href="#" v-on:click="reset">もう一度やる</a>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

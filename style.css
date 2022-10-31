@@ -1,0 +1,37 @@
+body {
+  text-align: center;
+}
+
+section {
+  border: solid 10px #f39838;
+  border-radius: 10px;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+span {
+  font-weight: bold;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #eb6100;
+  border-radius: 20px;
+  padding: 5px 15px;
+  width: auto;
+}
+
+.result {
+  color: #ff5722;
+}
+
+strong {
+  font-size: 23px;
+}
+
+img {
+  width: 100px;
+}
